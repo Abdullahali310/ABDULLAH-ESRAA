@@ -215,7 +215,7 @@ export function MainSite({ audioPlaying, toggleAudio, onAudioError }: { audioPla
             
             <div className="flex items-center gap-4 text-[#2A2520]/90 font-body text-lg mb-12">
               <MapPin className="w-6 h-6 text-[#B28938]/80" strokeWidth={1.5} />
-              <span className="text-2xl font-body">بقاعة الريان</span>
+              <span className="text-2xl font-body">بقاعة الريان بالطيبة</span>
             </div>
 
             <a 
@@ -253,7 +253,7 @@ export function MainSite({ audioPlaying, toggleAudio, onAudioError }: { audioPla
             </motion.div>
 
             <h3 className="text-5xl text-[#B28938] font-display mb-6">حفل الزفاف</h3>
-            <p className="text-[#2A2520]/90 font-body text-2xl mb-4 leading-relaxed font-light">نتشرف بحضوركم حفل زفافنا الميمون</p>
+            <p className="text-[#2A2520]/90 font-body text-2xl mb-4 leading-relaxed font-light">نتشرف بحضوركم حفل زفافنا </p>
             
             <div className="w-24 h-[2px] bg-gradient-to-r from-transparent via-[#B28938]/50 to-transparent my-8" />
 
@@ -264,7 +264,7 @@ export function MainSite({ audioPlaying, toggleAudio, onAudioError }: { audioPla
             
             <div className="flex items-center gap-4 text-[#2A2520]/90 font-body text-lg mb-12">
               <MapPin className="w-6 h-6 text-[#B28938]" strokeWidth={1.5} />
-              <span className="text-2xl font-body">بقاعة LA VIE الفخمة</span>
+              <span className="text-2xl font-body">بقاعة LA VIE </span>
             </div>
 
             <a 
