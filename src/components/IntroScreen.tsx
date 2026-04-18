@@ -10,22 +10,24 @@ interface IntroProps {
 export function IntroScreen({ onComplete, onPlayAudio }: IntroProps) {
   const [stage, setStage] = useState(0);
 
-  useEffect(() => {
-    // Stage 0: Blank screen -> Wait 1.0s for dawn feeling
+    useEffect(() => {
+    // Stage 0: Blank screen -> Wait 1.0s
     const t1 = setTimeout(() => setStage(1), 1000);
-    // Stage 1: Golden Light & Names -> Wait 8.5s
-    const t2 = setTimeout(() => setStage(2), 9500);
-    // Stage 2: Arabic text 1 -> Wait 8s
-    const t3 = setTimeout(() => setStage(3), 17500);
-    // Stage 3: Arabic text 2 -> Wait 8s
+    
+    // Stage 1: Names -> Wait 2s (تبدأ عند 1000 وتختفي عند 3000)
+    const t2 = setTimeout(() => setStage(2), 3000); 
+    
+    // Stage 2: Arabic text 1 -> Wait 8s (تستمر 8 ثوانٍ وتختفي عند 11000)
+    const t3 = setTimeout(() => setStage(3), 11000); 
+    
+    // Stage 3: Arabic text 2 -> Wait 8s (تستمر 8 ثوانٍ وتختفي عند 19000)
     const t4 = setTimeout(() => {
-      setStage(4); // Fade out last text
-      // Auto transition to main site after a short delay
+      setStage(4); 
       setTimeout(() => {
         onPlayAudio();
         onComplete();
       }, 2000);
-    }, 25500);
+    }, 19000); 
     
     return () => {
       clearTimeout(t1);
@@ -34,6 +36,7 @@ export function IntroScreen({ onComplete, onPlayAudio }: IntroProps) {
       clearTimeout(t4);
     };
   }, [onComplete, onPlayAudio]);
+
 
   return (
     <motion.div
