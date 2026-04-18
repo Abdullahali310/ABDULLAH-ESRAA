@@ -63,7 +63,7 @@ export function IntroScreen({ onComplete, onPlayAudio }: IntroProps) {
       <motion.div 
         className="relative z-10 text-center flex flex-col items-center w-full px-6 gap-6 h-full justify-center"
         animate={{ scale: [1, 1.05] }}
-        transition={{ duration: 30, ease: "linear" }}
+        transition={{ duration: 3, ease: "linear" }}
       >
         <AnimatePresence mode="wait">
           {stage === 1 && (
